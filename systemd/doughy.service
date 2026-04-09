@@ -1,0 +1,14 @@
+[Unit]
+Description=Doughy sourdough fermentation controller
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/doughy
+ExecStart=/usr/bin/python3 -m doughy run --config /home/pi/doughy/config.yaml
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

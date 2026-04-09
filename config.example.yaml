@@ -1,0 +1,20 @@
+# Doughy configuration
+
+# -- Temperature control --
+target_temp: 26.0        # Target temperature in Celsius
+deadband: 0.5            # Hysteresis band: heater ON below target-deadband,
+                         #                  heater OFF above target+deadband
+
+# -- Hardware --
+mock_hardware: true      # true = simulated sensor/relay (for PC development)
+                         # false = real DS18B20 + GPIO relay (for Raspberry Pi)
+relay_pin: 17            # BCM GPIO pin connected to relay IN
+relay_active_high: true  # true if relay triggers on HIGH signal
+mock_ambient_temp: 20.0  # Starting ambient temp for mock sensor (Celsius)
+
+# -- Timing --
+read_interval_seconds: 10   # How often to read the sensor
+log_interval_seconds: 60    # How often to write to the database
+
+# -- Storage --
+db_path: "doughy.db"     # SQLite database file path

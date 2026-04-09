@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doughy"
+version = "0.1.0"
+description = "Raspberry Pi sourdough fermentation temperature controller"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+rpi = [
+    "w1thermsensor>=2.0",
+    "gpiozero>=2.0",
+]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["doughy*"]
+
+[project.scripts]
+doughy = "doughy.cli:cli"
