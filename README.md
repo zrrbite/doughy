@@ -9,7 +9,7 @@ If you just need to hold a temperature and don't need logging or remote control,
 | Controller | Price | Description |
 |-----------|-------|-------------|
 | **W1209** | ~$2-5 | Bare PCB thermostat module. LED display, 3 buttons, NTC probe input, onboard relay. Runs on 12V. Wire your heater to the relay terminals and you're done. Cheapest and simplest option. |
-| **STC-1000** | ~$8-15 | Panel-mountable thermostat. Larger display, NTC probe included, configurable deadband. Needs to be wired into a project box. Popular in homebrewing. |
+| **STC-1000** | ~$8-15 | Panel-mountable thermostat. Larger display, NTC probe included, configurable deadband. Requires mains wiring into an enclosure — more involved but popular in homebrewing. |
 | **Inkbird ITC-308** | ~$35 | Plug-and-play. Comes with probe, has wall outlet sockets for heating and cooling. No wiring — plug the heater into the "heat" outlet, drop the probe in, set the temp. |
 
 Any of these will hold a fermentation temperature just fine. Doughy adds value when you want temperature logging, remote monitoring from your phone, or programmable fermentation profiles (e.g., "26°C for 4 hours then drop to 4°C").
