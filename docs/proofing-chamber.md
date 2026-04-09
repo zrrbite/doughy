@@ -26,7 +26,10 @@ An insulated enclosure with a heat source and temperature probe. The STC-1000 re
 |------|-------------|-----------|
 | **STC-1000** | Thermostat controller with NTC probe | $8-15 |
 | **Enclosure** | Styrofoam cooler box, small plastic storage tub, or modified cabinet. Bigger = more stable temp but slower to heat. A 30-50L cooler works well. | $5-20 |
-| **Heat source** | Incandescent bulb (25-40W) with ceramic socket, or a reptile heat mat. Incandescent bulbs are cheap and produce gentle, even heat. | $3-10 |
+| **Ceramic lamp holder** | E27 base, ceramic (not plastic — it sits in an enclosed warm space). | $2-3 |
+| **Incandescent bulb** | 25-40W. Must be incandescent — LED bulbs produce almost no heat. | $1-2 |
+| **Mains cable** | Short length of 2-core mains cable to wire the lamp holder to the STC-1000. | $2-5 |
+| **Junction box** (recommended) | Small electrical enclosure to house the STC-1000 and mains connections with proper strain relief. | $3-5 |
 | **12V PC fan** (optional) | 80mm or 120mm case fan for air circulation. Prevents hot spots near the heater. | $3-8 |
 | **12V DC adapter** (for fan) | 1A is plenty. Standard barrel jack. | $3-5 |
 
@@ -51,6 +54,28 @@ Probe:
 ```
 
 The relay is wired in series with the live wire to the heat source. When the temperature drops below the setpoint, the relay closes and the heater gets power.
+
+### Bulb wiring detail
+
+The ceramic lamp holder has two terminals (live and neutral). Wire them to the STC-1000 relay output and mains neutral:
+
+```
+                  STC-1000
+                 +--------+
+  Mains L ------>| 1      |
+  Mains N ------>| 2    5 |----> Lamp holder L terminal
+                 |      6 |----> Mains L (jumper from terminal 1)
+                 |  7   8 |
+                 +--|-----|+
+                    |    |
+                  NTC probe
+
+  Mains N -----------------> Lamp holder N terminal
+```
+
+The STC-1000 relay (terminals 5-6) switches the live wire. Neutral goes straight from mains to the lamp holder.
+
+All mains connections should be inside a junction box with strain relief on the cables. The lamp holder and cable then run from the junction box into the enclosure, with the bulb inside.
 
 ## Optional: 12V Fan
 
