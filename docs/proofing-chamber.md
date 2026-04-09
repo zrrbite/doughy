@@ -4,7 +4,7 @@ A simple enclosed proofing chamber using an STC-1000 thermostat to hold fermenta
 
 ## Concept
 
-An insulated enclosure with a heat source, temperature probe, and a small fan for air circulation. The STC-1000 reads the probe and switches the heater on/off to maintain the target temperature. The dough container sits inside.
+An insulated enclosure with a heat source and temperature probe. The STC-1000 reads the probe and switches the heater on/off to maintain the target temperature. The dough container sits inside.
 
 ```
 +---------------------------------------+
@@ -14,10 +14,10 @@ An insulated enclosure with a heat source, temperature probe, and a small fan fo
 |                                       |
 |                     [Temp probe]      |
 |                                       |
-|   [Heat source]     [12V fan]         |
+|   [Heat source]                       |
 +---------------------------------------+
-        |                  |
-    STC-1000 relay     12V adapter
+        |
+    STC-1000 relay
 ```
 
 ## Parts
@@ -52,43 +52,9 @@ Probe:
 
 The relay is wired in series with the live wire to the heat source. When the temperature drops below the setpoint, the relay closes and the heater gets power.
 
-## 12V Fan Hookup
+## Optional: 12V Fan
 
-The fan runs continuously to circulate air — it doesn't need to be switched by the STC-1000.
-
-### Option A: USB fan (simplest)
-
-Use a USB-powered fan and plug it into any USB charger. No wiring needed.
-
-### Option B: 12V PC fan with adapter
-
-A standard PC case fan (80mm or 120mm) runs on 12V DC.
-
-```
-12V DC adapter:
-  (+) positive -> Fan red wire
-  (-) negative -> Fan black wire
-```
-
-Most 12V adapters have a barrel jack. You can either:
-- Cut the barrel jack off and wire directly to the fan leads
-- Use a barrel jack breakout board (~$1) for screw terminals
-
-If the fan has a 3-pin or 4-pin PC connector, cut it off and use the red (+12V) and black (GND) wires. Ignore the yellow (tach) and blue (PWM) wires if present.
-
-### Option C: Share the STC-1000 power supply
-
-If your heat source is also 12V (e.g., a reptile heat mat on a 12V adapter), you can power the fan from the same 12V supply — just wire the fan in parallel. The fan draws very little current (<0.2A).
-
-```
-12V adapter (+) ---+--- Heat mat (+)
-                   +--- Fan red wire
-
-12V adapter (-) ---+--- Heat mat (-)
-                   +--- Fan black wire
-```
-
-In this setup, the STC-1000 relay switches the heat mat but the fan runs continuously.
+In a small enclosure, heat distributes well enough without a fan. If you notice uneven temperatures (e.g., with a large enclosure or a point heat source like a bulb), add a small 12V PC fan (80mm or 120mm) to circulate air. Wire it to a 12V adapter — red to (+), black to (-). The fan runs continuously and doesn't need to be switched by the STC-1000.
 
 ## Tips
 
