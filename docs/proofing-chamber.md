@@ -12,7 +12,7 @@ An insulated enclosure with a heat source, temperature probe, and a small fan fo
 |                                       |
 |   [Dough container]                   |
 |                                       |
-|   [Dish of water]   [Temp probe]      |
+|                     [Temp probe]      |
 |                                       |
 |   [Heat source]     [12V fan]         |
 +---------------------------------------+
@@ -29,7 +29,6 @@ An insulated enclosure with a heat source, temperature probe, and a small fan fo
 | **Heat source** | Incandescent bulb (25-40W) with ceramic socket, or a reptile heat mat. Incandescent bulbs are cheap and produce gentle, even heat. | $3-10 |
 | **12V PC fan** (optional) | 80mm or 120mm case fan for air circulation. Prevents hot spots near the heater. | $3-8 |
 | **12V DC adapter** (for fan) | 1A is plenty. Standard barrel jack. | $3-5 |
-| **Dish of water** | Keeps humidity up so the dough surface doesn't dry out. | free |
 
 ## STC-1000 Wiring
 
@@ -95,6 +94,5 @@ In this setup, the STC-1000 relay switches the heat mat but the fan runs continu
 
 - **Probe placement**: Put the probe near the dough, not touching the heater or walls. Clip it to the inside wall at dough height.
 - **Insulation**: The better insulated, the less the heater cycles. Even lining a plastic tub with foil-backed foam board makes a big difference.
-- **Humidity**: A small open dish of warm water inside prevents the dough surface from drying out during long ferments.
 - **Bulb wattage**: Start with 25W in a small enclosure. 40W if it struggles to reach temperature. Too much wattage causes overshoot.
 - **Ventilation**: You don't need air holes — sourdough fermentation doesn't consume enough oxygen to matter in a 30-50L enclosure. Opening the lid to check the dough is plenty.
