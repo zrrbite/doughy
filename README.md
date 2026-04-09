@@ -2,6 +2,18 @@
 
 A Raspberry Pi 3 temperature controller for sourdough fermentation. Maintains a target temperature inside a food-safe container using a heating mat, DS18B20 temperature probe, and a relay — all off-the-shelf parts (~$30-55 excluding the Pi).
 
+## Simpler alternatives
+
+If you just need to hold a temperature and don't need logging or remote control, off-the-shelf thermostat controllers exist and work well:
+
+| Controller | Price | Description |
+|-----------|-------|-------------|
+| **W1209** | ~$2-5 | Bare PCB thermostat module. LED display, 3 buttons, NTC probe input, onboard relay. Runs on 12V. Wire your heater to the relay terminals and you're done. Cheapest and simplest option. |
+| **STC-1000** | ~$8-15 | Panel-mountable thermostat. Larger display, NTC probe included, configurable deadband. Needs to be wired into a project box. Popular in homebrewing. |
+| **Inkbird ITC-308** | ~$35 | Plug-and-play. Comes with probe, has wall outlet sockets for heating and cooling. No wiring — plug the heater into the "heat" outlet, drop the probe in, set the temp. |
+
+Any of these will hold a fermentation temperature just fine. Doughy adds value when you want temperature logging, remote monitoring from your phone, or programmable fermentation profiles (e.g., "26°C for 4 hours then drop to 4°C").
+
 ## How it works
 
 A bang-bang (hysteresis) controller reads the temperature sensor every few seconds. When the temp drops below `target - deadband`, the heater turns on. When it rises above `target + deadband`, the heater turns off. Readings are logged to a SQLite database.
