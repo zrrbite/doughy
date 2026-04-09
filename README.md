@@ -58,6 +58,7 @@ The software runs on any PC (Windows/Mac/Linux) without GPIO hardware. Set `mock
 
 ## Docs
 
+- [Proofing chamber build](docs/proofing-chamber.md) — insulated enclosure with STC-1000, fan hookup, tips
 - [Shopping list](docs/shopping-list.md) — all parts needed with descriptions and prices
 - [Wiring guide](docs/wiring.md) — GPIO pinout, DS18B20 and relay connections, wiring diagram
 
