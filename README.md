@@ -1,6 +1,6 @@
 # Doughy
 
-A Raspberry Pi 3 temperature controller for sourdough fermentation. Maintains a target temperature inside a food-safe container using a heating mat, DS18B20 temperature probe, and a relay — all off-the-shelf parts (~$30-55 excluding the Pi).
+A Raspberry Pi 3 temperature controller for sourdough fermentation. Maintains a target temperature inside a food-safe container using a heating mat, DS18B20 temperature probe, and a relay — all off-the-shelf parts (~$30-55 excluding the Pi). I need to build this soon.
 
 ## Simpler alternatives
 
